@@ -26,7 +26,7 @@ Given a sentence pair `(Arg1, Arg2)`, predict the relation:
 ## 🛠️ Methods
 
 We implemented and compared:
-- **Prompting (with/without examples)** using GPT-3.5/“GPT-4 class” models. Prompts with examples consistently improve performance. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
+- **In-Context learning (with/without examples)** using GPT-3.5/“GPT-4 class” models. Prompts with examples consistently improve performance. :contentReference[oaicite:4]{index=4} :contentReference[oaicite:5]{index=5}
 - **Supervised fine-tuning of GPT-3.5** on the training split (chat-style format).
 - **LLaMA-3 fine-tuning** via **PEFT** (parameter-efficient fine-tuning) with a sequence-classification head. :contentReference[oaicite:6]{index=6} :contentReference[oaicite:7]{index=7}
 
