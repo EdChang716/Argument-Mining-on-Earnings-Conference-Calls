@@ -1,4 +1,4 @@
-# Argument Mining on Earnings Conference Calls (NLP Final Project — Task 2)
+# Argument Mining on Earnings Conference Calls
 
 This repository contains code and notebooks for **argument mining** on earnings conference call transcripts, including:
 - **Argument Unit Classification** (Premise vs. Claim)
