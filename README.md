@@ -37,20 +37,60 @@ Typical fine-tuning settings (illustrative):
 
 ## 📊 Results (Weighted F1)
 
-| Task | Method | Weighted F1 |
-|---|---|---|
-| AU (Premise vs. Claim) | GPT-3.5 **prompt without examples** | 0.67 |
-| AU (Premise vs. Claim) | GPT-3.5 **In-context learning** | 0.67 |
-| AU (Premise vs. Claim) | **GPT-3.5 fine-tuned** | **0.76** |
-| AU (Premise vs. Claim) | LLaMA-3 fine-tuned (PEFT) | 0.75 |
-| AR (No/Support/Attack) | GPT-4 **prompt without examples** | 0.13 |
-| AR (No/Support/Attack) | GPT-4 **In-context learning** | 0.60 |
-| AR (No/Support/Attack) | **GPT-4 fine-tuned** | **0.77** |
-| AR (No/Support/Attack) | LLaMA-3 fine-tuned (PEFT) | 0.76 |
+<table>
+<tr>
+<td>
 
-> Prompts with examples improve results over zero-shot; **fine-tuning further lifts F1** (GPT slightly > LLaMA-3 under our setup). :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
+**Argument Unit Classification (AU: Premise vs. Claim)**
+
+| Method | Weighted F1 |
+|---|---|
+| GPT-3.5 prompt without examples | 0.66 |
+| GPT-3.5 In-context learning | 0.67 |
+| **GPT-3.5 fine-tuned** | **0.76** |
+| LLaMA-3 fine-tuned (PEFT) | 0.75 |
+
+</td>
+<td>
+
+**Argument Relation Classification (AR: No / Support / Attack)**
+
+| Method | Weighted F1 |
+|---|---|
+| GPT-4 prompt without examples | 0.13 |
+| GPT-4 In-context learning | 0.60 |
+| **GPT-4 fine-tuned** | **0.77** |
+| LLaMA-3 fine-tuned (PEFT) | 0.76 |
+
+</td>
+</tr>
+</table>
+
+> In-context learning improve results over zero-shot; **fine-tuning further lifts F1** (GPT slightly > LLaMA-3 under our setup). :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
 
 ---
 
 ## 📂 Repository Structure
+
+```plaintext
+.
+├── README.md
+├── notebooks/
+│   ├── 2_1_argument_unit_classification_gpt35.ipynb
+│   ├── 2_1_argument_unit_classification_llama3_peft.ipynb
+│   ├── 2_2_argument_relation_classification_gpt35.ipynb
+│   └── 2_2_argument_relation_classification_llama3_peft.ipynb
+├── data/
+│   ├── train/               # training split (not tracked; see Data Access)
+│   ├── dev/                 # dev split (not tracked)
+│   └── test/                # test split (not tracked)
+├── scripts/
+│   ├── preprocess.py        # text cleaning / dataset builders
+│   ├── peft_ft_llama.py     # PEFT finetune utilities
+│   └── eval_metrics.py      # F1 / confusion matrix / reports
+├── results/
+│   ├── au/                  # AU predictions / logs
+│   └── ar/                  # AR predictions / logs
+└── requirements.txt
+
 
