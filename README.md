@@ -39,11 +39,13 @@ Typical fine-tuning settings (illustrative):
 
 | Task | Method | Weighted F1 |
 |---|---|---|
-| AU (Premise vs. Claim) | GPT-3.5 **prompt w/ examples** (no FT) | 0.67 |
+| AU (Premise vs. Claim) | GPT-3.5 **prompt without examples** | 0.67 |
+| AU (Premise vs. Claim) | GPT-3.5 **In-context learning** | 0.67 |
 | AU (Premise vs. Claim) | **GPT-3.5 fine-tuned** | **0.76** |
 | AU (Premise vs. Claim) | LLaMA-3 fine-tuned (PEFT) | 0.75 |
-| AR (No/Support/Attack) | GPT-class **prompt w/ examples** (no FT) | 0.60 |
-| AR (No/Support/Attack) | **GPT-class fine-tuned** | **0.77** |
+| AR (No/Support/Attack) | GPT-4 **prompt without examples** | 0.13 |
+| AR (No/Support/Attack) | GPT-4 **In-context learning** | 0.60 |
+| AR (No/Support/Attack) | **GPT-4 fine-tuned** | **0.77** |
 | AR (No/Support/Attack) | LLaMA-3 fine-tuned (PEFT) | 0.76 |
 
 > Prompts with examples improve results over zero-shot; **fine-tuning further lifts F1** (GPT slightly > LLaMA-3 under our setup). :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
