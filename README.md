@@ -74,22 +74,14 @@ Typical fine-tuning settings (illustrative):
 ```plaintext
 .
 ├── README.md
-├── notebooks/
-│   ├── 2_1_argument_unit_classification_gpt35.ipynb
-│   ├── 2_1_argument_unit_classification_llama3_peft.ipynb
-│   ├── 2_2_argument_relation_classification_gpt35.ipynb
-│   └── 2_2_argument_relation_classification_llama3_peft.ipynb
+├── Code/
+│   ├── Task2.1_LLAMA3_FT.ipynb
+│   ├── Task2.2_LLAMA3_FT.ipynb
+│   ├── Task_2.1_GPT_FT_code.ipynb
+│   └── Task_2.2_GPT_FT_code.ipynb
+│   └── Task2_ICL_GPT.ipynb  # contains both task 2.1 and 2.2
 ├── data/
-│   ├── train/               # training split (not tracked; see Data Access)
-│   ├── dev/                 # dev split (not tracked)
-│   └── test/                # test split (not tracked)
-├── scripts/
-│   ├── preprocess.py        # text cleaning / dataset builders
-│   ├── peft_ft_llama.py     # PEFT finetune utilities
-│   └── eval_metrics.py      # F1 / confusion matrix / reports
-├── results/
-│   ├── au/                  # AU predictions / logs
-│   └── ar/                  # AR predictions / logs
-└── requirements.txt
-
+│   ├── Task2.1/               # Original Data for task 2.1
+│   ├── Task2.2/                 # Original Data for task 2.2
+│   └── others             # preprocessed data for model fine-tuning and ICL
 
