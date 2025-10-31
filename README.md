@@ -27,11 +27,10 @@ Given a sentence pair `(Arg1, Arg2)`, predict the relation:
 We implemented and compared:
 - **In-Context learning (with/without examples)** using GPT-3.5/“GPT-4 class” models. Prompts with examples consistently improve performance. 
 - **Supervised fine-tuning of GPT-3.5** on the training split (chat-style format).
-- **LLaMA-3 fine-tuning** via **PEFT** (parameter-efficient fine-tuning) with a sequence-classification head. :contentReference[oaicite:6]{index=6} 
+- **LLaMA-3 fine-tuning** via **PEFT** (parameter-efficient fine-tuning) with a sequence-classification head.
 
 Typical fine-tuning settings (illustrative):
-`learning_rate=1e-4`, `per_device_train_batch_size=8`, `per_device_eval_batch_size=8`, `num_train_epochs=2`. :contentReference[oaicite:8]{index=8} 
-
+`learning_rate=1e-4`, `per_device_train_batch_size=8`, `per_device_eval_batch_size=8`, `num_train_epochs=2`.
 ---
 
 ## 📊 Results (Weighted F1)
